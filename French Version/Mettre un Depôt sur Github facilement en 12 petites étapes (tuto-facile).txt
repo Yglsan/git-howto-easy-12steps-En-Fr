@@ -14,13 +14,27 @@ Sur une Arch Linux ou une dérivée comme Manjaro :
 
 1) Créer un compte sur le site Github
 (sautez cette étape si vous avez déjà un compte).
-Par contre il n'y a pas de couleurs dans cette version.
+ 
+Créer un répertoire sur le site Github qui aura le même nom que celui choisi sur son ordinateur. 
+Exemple : répertoire créé sur Github : 
+MONREPERTOIRE
+
+Dans l’ordinateur : 
+/home/jeanclaudedusse/MONREPERTOIRE
+
+
+Revenir sur l’ordinateur.
 
 2) Créer un répertoire dans lequel placer son ou ses fichiers git
+
 >> mkdir MONREPERTOIRE
-(au besoin accorder les droits nécessaires à ce répertoire :
->> sudo chmod u+rwx MONREPERTOIRE        
->>sudo chown MONPSEUDO MONREPERTOIRE)
+
+                               
+                (au besoin accorder les droits nécessaires à ce répertoire :
+                 Droits >> sudo chmod u+rwx MONREPERTOIRE        
+                 Propriétaire>>sudo chown MONPSEUDO MONREPERTOIRE)
+ 
+
 Voilà, votre répertoire est créé et fonctionnel! 
 
 3) se déplacer dans le répertoire créé
@@ -34,16 +48,20 @@ echo "# MONREPERTOIRE" >> LISEZ-MOI.md
 
 5) placer votre logiciel ou votre dossier, votre ou vos fichiers dans le Dossier MONREPERTOIRE
 
-(Attention : ne pas toucher au répertoire caché .git créé par git init)
+
+
+[Attention : si jamais on a déjà effectué un « git init » (cf. point 6) auparavant, ne pas toucher au répertoire caché .git créé par git init].
 
 6) Indiquer à Git que MONREPERTOIRE doit être considéré comme un dossier à partager sur Github
 
 >> [ MONREPERTOIRE]$ git init
 
-Voilà, on a terminé la première partie, on a réussi à mettre le dossier qu'on veut partager sur Github sur un espace dédié (et on a fait comprendre au passage à Git que c'est bien ce dossier dont il est question), qu'il va falloir maintenant envoyer sur Github.
-(En profiter pour rajouter : git add README.md ou git add LISEZ-MOI.md)
+git init : initialise le git et crée un répertoire caché .git dans le répertoire créé. 
 
-7) Se connecter sur le site Github, puis cliquer sur l'icône (+) en haut à droite de la page d'accueil puis sélectionner l'option New Repository (qui signifie « Créer un nouveau dépôt »)
+Voilà, on a terminé la première partie, on a réussi à mettre le dossier qu'on veut partager sur Github sur un espace dédié (et on a fait comprendre au passage à Git que c'est bien ce dossier dont il est question), qu'il va falloir maintenant envoyer sur Github.
+(En profiter pour rajouter : git add README.md ou git add LISEZ-MOI.md, cf. point 4)
+
+7) Se connecter sur le site Github, puis cliquer sur l'icône (+) (quand on a déjà créé un fichier, c’est un bouton « New »), en haut à droite de la page d'accueil puis sélectionner l'option New Repository (qui signifie « Créer un nouveau dépôt »)
 
 Sur la page qui s'affiche, dans le champ « Repository name », entrez un nom pour votre dépôt. 
 Attention :  il faut créer le même nom que celui qui est sur votre ordinateur, pour que les deux dossiers soient fusionnés ensuite. Ainsi ici MONREPERTOIRE aura le même nom que MONDEPOT… 
@@ -53,7 +71,7 @@ Cliquez sur "Create Repository", c'est à dire : "Créer un dépôt".
 
 8) Maintenant on va mettre en ligne notre dépôt : 
 
-En face de "HTTPS" , on a une ligne qui ressemble à ça :  https://github.com/JEANCLAUDE/MONDEPOT.git
+En face de "HTTPS" , on a une ligne qui ressemble à ça :  https://github.com/JEANCLAUDEDUSSE/MONDEPOT.git
 On a donc l'adresse de notre dépôt en ligne sur github. Il suffit donc maintenant de lui adjoindre : git remote add origin, pour faire comprendre à la machine où doit se situer notre dépot en ligne .
 remote = déplacer
 add = ajouter 
@@ -97,13 +115,9 @@ Il reste maintenant à
 
 12) Créer une branche pour créer une page sur notre dépôt, sur le site : 
 
-cliquer sur Create branch : NOMCHOISI  
+cliquer sur Create branch :  NOMdeMABRANCHE
 
-Voilà, à ce stade vous avez normalement réussi à mettre votre dépôt en ligne. 
-
-Pour télécharger une version d’une branche spécifique, vous pourrez le faire comme ça : 
-git clone  --branch NOMDELABRANCHE URLDEVOTREFICHIER.git 
-
+Voilà, à ce stade vous avez normalement réussi à mettre votre dépôt en ligne. Si vous avez des erreurs, n’hésitez pas à en parler, et à mentionner des correctifs pour faire évoluer la documentation. 
 ##########################################
 
 NB : si jamais vous voulez ajouter des choses : 
